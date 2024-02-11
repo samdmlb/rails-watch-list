@@ -11,6 +11,12 @@
   </head>
 
   <body>
+    <nav class="navbar navbar-light bg-light justify-content-between px-5">
+      <%= link_to 'My Lists', lists_path, class: "navbar-brand" %>
+      <form class="form-inline">
+        <%= link_to 'Add a List', new_list_path %>
+      </form>
+    </nav>
     <%= yield %>
   </body>
 </html>

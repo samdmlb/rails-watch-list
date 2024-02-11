@@ -1,0 +1,16 @@
+<div class="card-category-banner" style="background-image: url(https://hips.hearstapps.com/hmg-prod/images/hbz-classic-movies-rebecca-gettyimages-2629943-1590707751.jpg);">
+  Save any kind of movies
+</div>
+<div>
+  <div class="py-5 mx-auto d-flex justify-content-between" style="width: 1200px">
+    <h2>My lists</h2>
+    <%= link_to 'Create a movie list', new_list_path %>
+  </div>
+  <div class="mx-auto d-flex flex-wrap justify-content-between" style="width: 1200px">
+    <% @lists.each do |list| %>
+    <div class="card-category-list" style="background-image: url(https://hips.hearstapps.com/hmg-prod/images/hbz-classic-movies-rebecca-gettyimages-2629943-1590707751.jpg);">
+      <%= link_to list.name, list_path(list), style: "text-decoration: none; color: white;" %>
+    </div>
+    <% end %>
+  </div>
+</div>
